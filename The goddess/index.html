@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>xy的女神馆</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+        body {
+            padding-top: 50px;
+            padding-bottom: 40px;
+            color: #5a5a5a;
+        }
+
+        /* 轮播广告 */
+
+        .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* 简介 */
+
+        .summary {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .summary .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* 特性 */
+
+        .feature-divider {
+            margin: 40px 0;
+        }
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+
+        /* 响应式布局 */
+
+        @media (max-width: 768px) {
+
+            .summary {
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+
+            .carousel img {
+                min-height: 300px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .feature-heading {
+                font-size: 34px;
+            }
+
+            .feature-heading .text-muted {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-heading {
+                margin-top: 120px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">女神大集合</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#ad-carousel">欢迎来到xy的女神馆</a></li>
+                <li><a href="#summary-container">xy最爱的</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">女神都有谁 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#feature-tab" data-tab="tab-chrome">刘亦菲</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-firefox">全智贤</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-safari">锐雯</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-opera">朱茵</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-ie">秀智</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">为什么是她们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- 广告轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+        <li data-target="#ad-carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/lyf1.jpg" alt="1 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>刘亦菲</h1>
+
+                    <p>Google 刘亦菲，1987年8月25日出生于湖北省武汉市，影视女演员、歌手，毕业于北京电影学院2002级表演系本科班。</p>
+
+                   <!--  <p><a class="btn btn-lg btn-primary" href="http://www.google.cn/intl/zh-CN/chrome/browser/"
+                          role="button" target="_blank">点我下载</a></p> -->
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/qzx.jpg" alt="2 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>全智贤</h1>
+
+                    <p>全智贤，1981年10月30日出生于韩国首尔，韩国女演员。</p>
+
+                   <!--  <p><a class="btn btn-lg btn-primary" href="http://www.firefox.com.cn/download/" target="_blank"
+                          role="button">点我下载</a></p> -->
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/rw.jpg" alt="3 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>放逐之刃</h1>
+
+                    <p>放逐之刃（锐雯）是美国Riot Games开发的3D大型竞技场战网游戏《英雄联盟》中的一名英雄。</p>
+
+                    <!-- <p><a class="btn btn-lg btn-primary" href="http://www.apple.com/cn/safari/" target="_blank"
+                          role="button">点我下载</a></p> -->
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/zy.jpg" alt="4 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>朱茵</h1>
+
+                    <p>朱茵，1971年10月25日出生于香港，中国影视女演员、歌手，毕业于香港演艺学院戏剧系。</p>
+
+                   <!--  <p><a class="btn btn-lg btn-primary" href="http://www.opera.com/zh-cn" target="_blank"
+                          role="button">点我下载</a></p> -->
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/xz.jpg" alt="5 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>裴秀智</h1>
+
+                    <p>裴秀智，1994年10月10日生于韩国光州广域市，韩国女歌手、演员、主持人、模特，女子演唱组合miss A成员。</p>
+
+                   <!--  <p><a class="btn btn-lg btn-primary" href="http://ie.microsoft.com/" target="_blank"
+                          role="button">点我下载</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<!-- 主要内容 -->
+<div class="container summary">
+
+    <!-- 简介 -->
+    <div class="row" id="summary-container">
+        <div class="col-md-4">
+            <img class="img-circle" src="images/lyf3.jpg" alt="chrome">
+
+            <h2>刘亦菲</h2>
+
+            <p>由于《神雕侠侣》中的小龙女形象，让xy同学迷上了她，可惜她如今被韩国棒子骗走了~</p>
+
+            <p><a class="btn btn-default" href="#" role="button">给她点赞</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/qzx2.jpg" alt="firefox">
+
+            <h2>全智贤</h2>
+
+            <p>由于《我的野蛮女友》电影中，全智贤女神完美演绎了xy心中对女神的各种标准，荣登女神榜首。</p>
+
+            <p><a class="btn btn-default" href="#" role="button">给她点赞</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/rw3.jpg" alt="safari">
+
+            <h2>放逐之刃</h2>
+
+            <p>《英雄联盟》中xy最喜欢也是最拿手的英雄。</p>
+
+            <p><a class="btn btn-default" href="#" role="button">给她点赞</a></p>
+        </div>
+    </div>
+
+    <!-- 特性 -->
+
+    <hr class="feature-divider">
+
+    <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+        <li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">刘亦菲</a></li>
+        <li><a href="#tab-firefox" role="tab" data-toggle="tab">全智贤</a></li>
+        <li><a href="#tab-safari" role="tab" data-toggle="tab">锐雯</a></li>
+        <li><a href="#tab-opera" role="tab" data-toggle="tab">朱茵</a></li>
+        <li><a href="#tab-ie" role="tab" data-toggle="tab">秀智</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-chrome">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">刘亦菲 <span
+                            class="text-muted">《神雕侠侣》</span></h2>
+
+                    <p class="lead">2002年出演《金粉世家》和《天龙八部》步入演艺圈，2004年主演《仙剑奇侠传》获得关注。2006年主演《神雕侠侣》中的“小龙女”一角而受到广泛关注，同年发行首张个人专辑《刘亦菲》。2008年与成龙、李连杰出演好莱坞电影《功夫之王》。在2009年4月的“80后新生代娱乐大明星”评选活动中，成为内地“四小花旦”（与黄圣依、王珞丹以及杨幂）之一。。</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/lyf2.jpg"
+                         alt="Chrome">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-firefox">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/qzx3.jpg"
+                         alt="Firefox">
+                </div>
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">全智贤 <span class="text-muted">《我的野蛮女友》</span>
+                    </h2>
+
+                    <p class="lead">1997年从事模特行业出道。1999年主演电影《白色情人节》获得百想艺术大赏最佳女新人奖。2000年主演文艺爱情电影《触不到的恋人》被好莱坞翻拍。2001年凭借电影《我的野蛮女友》获得韩国电影大钟奖最佳女主角奖。其后相继主演《野蛮师姐》、《雏菊》、《小夜刀》、《雪花秘扇》等多部电影</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-safari">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">放逐之刃 <span class="text-muted">《英雄联盟》</span></h2>
+
+                    <p class="lead">她其实对于操作的要求是非常高的，她在一般的匹配局中是可以做到很好的击杀或者带领你的团队走向胜利，但是要注意如果你想要将她带向排位中的话那么你应该更熟悉她的技能 。总之 ，她的可玩性是相当高的，还有要熟悉她的技能，并且能够做到把她的技能更好的衔接起来。
+</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/rw1.jpg"
+                         alt="Safari">
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-opera">
+            <div class="row feature">
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/zy2.jpg"
+                         alt="Opera">
+                </div>
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">朱茵 <span class="text-muted">《大话西游》</span>
+                    </h2>
+
+                    <p class="lead">1991年参演首部电影《逃学威龙2》。1993年获得壹电视十大最受欢迎电视艺人奖[1]  。1994年在武侠剧《射雕英雄传》中饰演黄蓉。[2]  1995年因在电影《大话西游》中饰演紫霞仙子而受到关注。</p>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-ie">
+            <div class="row feature">
+                <div class="col-md-7">
+
+                    <h2 class="feature-heading">秀智 <span class="text-muted">《建筑学概论》</span></h2>
+
+                    <p class="lead">2010年以miss A组合成员身份出道[1]  。2011年以电视剧《Dream High》[2]  作为演员出道，凭借此剧获得KBS演技大赏最佳新人奖，同年固定出演综艺节目《青春不败2》，并获得2012年KBS演艺大赏综艺部门最佳女新人。2012年参演电视剧《BIG》，同年首度出演电影《建筑学概论》，并凭借此片获得百想艺术大赏女子新人演技奖、青龙电影节人气奖等奖项，成为韩国首位在歌曲、电视剧、电影、综艺4个领域都获得新人奖的艺人
+</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/xz2.jpg"
+                         alt="IE">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 关于 -->
+    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="modal-label">你居然点开了！</h4>
+                </div>
+                <div class="modal-body">
+                    <p>女神就是女神，哪有那么多为什么！赶紧认错关了！</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">我错了！</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p class="pull-right"><a href="#top">回到顶部</a></p>
+
+        <p>&copy; xy的女神介绍完了，你的呢？ </p>
+    </footer>
+
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#ad-carousel').carousel();
+        $('#menu-nav .navbar-collapse a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
